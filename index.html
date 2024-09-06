@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  <link rel="icon" href="./image/book_5.png">
+  <title>Библиотека книг</title>
+</head>
+<body>
+  <div>
+  <header>
+    <h1 > <span class="material-symbols-outlined">
+      library_books
+      </span> Моя библиотека книг
+    </h1>
+    <button title="Обновить страницу"><span class="material-symbols-outlined">
+      refresh
+      </span></button>
+  </header>
+  <div>
+    <section class="editBook" id="editBook">
+      <div class="form">
+        <div class="buttons" style="width: 20rem;">
+          <button class="button_close">
+            <span class="material-symbols-outlined">
+            close</span>
+          </button>
+        </div>
+        <h3>Редактировать книгу <span class="material-symbols-outlined">
+          edit
+          </span></h3>
+        <form action="" onsubmit="return editBook()">
+          <div><label for="title1">Название</label><br><input type="text" id="title1"></div>
+          <div><label for="autor1">Автор</label><br><input type="text" id="autor1"></div>
+          <div><label for="year1">Год</label><br><input type="number" step="1" id="year1"></div>
+          <div><label for="genre1">Жанр</label><br><input type="text" id="genre1"></div>
+          <div><label for="status1">Статус</label><br>
+            <select id="status1">
+              <option>Прочитано</option>
+              <option>Не прочитано</option>
+            </select>
+          </div>
+          <div class="submit1">
+            <input type="submit" class="button" value="Сохранить"></Input>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section id="filter">
+      <form action="">
+        <div>
+          <label for="select_genre">Выбрать жанр</label><br>
+          <select id="select_genre"><option></option></select>
+        </div>
+        <div>
+          <label for="select_status">Выбрать статус</label><br>
+          <select id="select_status"><option></option></select>
+        </div>
+        <button>Показать все</button>
+      </form>
+    </section>
+    <section class="list">
+      <h3>Список книг</h3>
+      <div id="list"></div>
+    </section>
+  </div>
+  <section id="bookList">
+  </section>
+  <section id="addBook">
+    <h3>Добавить книгу <span class="material-symbols-outlined">
+      library_add
+      </span></h3>
+    <form action="" onsubmit="return addBook()">
+      <div><label for="title">Название</label><input type="text" id="title"></div>
+      <div><label for="autor">Автор</label><input type="text" id="autor"></div>
+      <div><label for="year">Год</label><input type="number" step="1" id="year"></div>
+      <div><label for="genre">Жанр</label><input type="text" id="genre"></div>
+      <div><label for="status">Статус</label><br>
+        <select id="status">
+          <option>Прочитано</option>
+          <option>Не прочитано</option>
+        </select>
+      </div>
+      <div class="submit">
+        <input type="submit" class="button" value="Сохранить"></input>
+      </div>
+    </form>
+  </section>
+  <footer>
+    <h3 id="amount"></h3>
+    <button title="Очистить библиотеку">
+      <span class="material-symbols-outlined">
+      delete
+      </span>
+    </button>
+  </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
